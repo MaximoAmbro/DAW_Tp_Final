@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="contenedor">
+    <h2>Contacto</h2>
+
+    <form id="formContacto">
+        <label>Nombre:</label>
+        <input type="text" id="nombre">
+
+        <label>Email:</label>
+        <input type="text" id="mail">
+
+        <label>Mensaje:</label>
+        <textarea id="mensaje"></textarea>
+
+        <button type="submit">Enviar</button>
+    </form>
+</div>
+
+<script src="js/validaciones.js"></script>
+
+<script>
+document.getElementById("formContacto").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    if (validarContacto()) {
+        var mail = document.getElementById("mail").value;
+        var mensaje = document.getElementById("mensaje").value;
+
+        window.location.href =
+            "mailto:" + mail +
+            "?subject=Contacto Buscaminas&body=" +
+            encodeURIComponent(mensaje);
+    }
+});
+</script>
+
+</body>
+</html>

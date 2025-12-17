@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscaminas</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="contenedor">
+
+    <header class="header">
+        <h1>Buscaminas</h1>
+        <div class="panel">
+            <span id="contadorMinas"></span>
+            <button id="reiniciar">Reiniciar</button>
+            <span id="tiempo">0</span>
+        </div>
+    </header>
+
+    <div id="modalNombre" class="modal oculto">
+        <div class="modal-contenido">
+            <p>Ingrese su nombre (mínimo 3 letras):</p>
+            <input type="text" id="inputNombre">
+            <button id="btnComenzar">Comenzar</button>
+        </div>
+    </div>
+
+    <div id="modalResultado" class="modal oculto">
+        <div class="modal-contenido">
+            <p id="mensajeResultado"></p>
+            <button id="btnCerrarResultado">Aceptar</button>
+        </div>
+    </div>
+
+    <div id="tablero" class="tablero"></div>
+
+</div>
+
+<script src="js/utils.js"></script>
+<script src="js/modales.js"></script>
+<script src="js/validaciones.js"></script>
+<script src="js/tablero.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
